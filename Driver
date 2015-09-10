@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Driver{
+	public static void main(String [] args){
+		BinaryTree dictionaryTree = new BinaryTree();
+		dictionaryTree.addNode("house", "casa");
+		dictionaryTree.addNode("dog", "perro");
+		dictionaryTree.addNode("homework" , "tarea");
+		dictionaryTree.addNode("woman" , "mujer");
+		dictionaryTree.addNode("town", "pueblo");
+		dictionaryTree.addNode("yes", "si");
+		dictionaryTree.inOrder(dictionaryTree.root);
+		String[] cadena = new String[11];
+		cadena[0] = "The";
+		cadena[1] = "woman";
+		cadena[2] = "asked";
+		cadena[3] = "me";
+		cadena[4] = "to";
+		cadena[5] = "do";
+		cadena[6] = "my";
+		cadena[7] = "homework";
+		cadena[8] = "about";
+		cadena[9] = "my";
+		cadena[10] = "town";
+		for (int i = 0; i< 11; i++){
+			String res = dictionaryTree.translate(cadena[i]);
+			if (res == null) res = cadena[i];
+			System.out.print(res + " ");
+		}
+	}	
+}
