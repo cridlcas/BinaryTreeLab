@@ -1,3 +1,10 @@
+/*********************************************************
+ * Universidad del Valle de Guatemala
+ * Algoritmos y Estructuras de Datos
+ * Prof: Douglas Barrios
+ * Cristian Castillo            14015
+ * Fernanda Gonzalez Davila     14482
+ *********************************************************/
 import java.util.Scanner;
 public class Driver{
 	public static void main(String [] args){
