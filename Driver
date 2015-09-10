@@ -7,6 +7,7 @@
  *********************************************************/
 import java.util.Scanner;
 public class Driver{
+	// Se generan los nodos
 	public static void main(String [] args){
 		BinaryTree dictionaryTree = new BinaryTree();
 		dictionaryTree.addNode("house", "casa");
@@ -16,6 +17,8 @@ public class Driver{
 		dictionaryTree.addNode("town", "pueblo");
 		dictionaryTree.addNode("yes", "si");
 		dictionaryTree.inOrder(dictionaryTree.root);
+		
+	//Se crea la cadena a mostras en pantalla
 		String[] cadena = new String[11];
 		cadena[0] = "The";
 		cadena[1] = "woman";
