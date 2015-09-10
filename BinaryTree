@@ -1,0 +1,93 @@
+public class BinaryTree { 
+	protected Node root;
+	public void addNode(String english, String spanish) {
+		Node newNode = new Node(english, spanish);
+		if (root == null) {
+			root = newNode;
+		} 
+		else {
+			Node focusNode = root;
+			Node parent;
+			while (true) {
+				parent = focusNode;
+				if (english.compareTo(focusNode.english) < 0) {
+					focusNode = focusNode.leftNode;
+					if (focusNode == null) {
+						parent.leftNode = newNode;
+						return;
+					}
+				} 
+				else {
+					focusNode = focusNode.rightNode;
+					if (focusNode == null) {
+						parent.rightNode = newNode;
+						return;
+					}
+				}
+			}
+		}
+	}
+	private static int recursiveTranslate(Node nod, String ing){
+		try{
+			return ing.compareTo(nod.english);
+		}
+		catch( NullPointerException name){
+		}
+		return 5;
+	}
+	public String translate (String english) {
+		Node focusNode = root;
+		int cont = 0;
+		while(cont < 3){
+			if (recursiveTraducir(focusNode,english) != 5){
+				if (recursiveTraducir(focusNode, english) == 0){
+					String res = focusNode.spanish;
+					return res;
+				} 
+				if (recursiveTraducir(focusNode, english) < 0){
+					try{
+						focusNode = focusNode.leftNode;
+					}
+					catch( NullPointerException name){
+						return null;
+					}
+					cont++;
+				}
+				else{
+					try{
+						focusNode = focusNode.rightNode;
+					}
+					catch( NullPointerException name){
+						return null;
+					}
+					cont++;
+				}
+			}
+			else{
+				return null;
+			}
+		}
+		return null;
+	}
+	//Extracto de codigo tomado de recursivo tomado de http://www.programmerinterview.com/index.php/data-structures/inorder-traversal/
+	public void inOrder(Node nodeInorder) { 
+			inOrder(nodeInorder.leftNode);
+			System.out.println(nodeInorder);
+			inOrder(nodeInorder.rightNode);
+		}
+	}
+	 public Node findNode(String english) {
+		Node focusNode = root;
+		while ((focusNode.english).compareTo(english) !=0) {
+			if (english.compareTo(focusNode.english) < 0) {
+				focusNode = focusNode.leftNode;
+			} 
+			else {
+				focusNode = focusNode.rightNode;
+			}
+			if (focusNode == null)
+				return null;
+		}
+		return focusNode;
+	}
+}
