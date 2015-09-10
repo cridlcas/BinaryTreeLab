@@ -1,4 +1,11 @@
-public class BinaryTree { 
+/*********************************************************
+ * Universidad del Valle de Guatemala
+ * Algoritmos y Estructuras de Datos
+ * Prof: Douglas Barrios
+ * Cristian Castillo            14015
+ * Fernanda Gonzalez Davila     14482
+ *********************************************************/
+ public class BinaryTree { 
 	protected Node root;
 	public void addNode(String english, String spanish) {
 		Node newNode = new Node(english, spanish);
