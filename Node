@@ -1,0 +1,21 @@
+public class Node {
+	protected String english;
+	protected String spanish;
+	protected Node leftNode;
+	protected Node rightNode;
+	
+	Node(String english, String spanish) {
+		this.english = english;
+		this.spanish = spanish;
+	}
+	
+	public String toString() {
+		return spanish + " En ingles es: " + english;
+	}
+	public String getenglish(){
+		return english;
+	}
+	public String getspanish(){
+		return spanish;
+	}
+}
