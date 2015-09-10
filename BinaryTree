@@ -7,6 +7,7 @@
  *********************************************************/
  public class BinaryTree { 
 	protected Node root;
+	//Metodo que agrega los valores al nodo
 	public void addNode(String english, String spanish) {
 		Node newNode = new Node(english, spanish);
 		if (root == null) {
@@ -34,6 +35,7 @@
 			}
 		}
 	}
+	//Programacion defensiva
 	private static int recursiveTranslate(Node nod, String ing){
 		try{
 			return ing.compareTo(nod.english);
@@ -42,6 +44,7 @@
 		}
 		return 5;
 	}
+	//Metodo que traduce
 	public String translate (String english) {
 		Node focusNode = root;
 		int cont = 0;
