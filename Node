@@ -1,4 +1,11 @@
-public class Node {
+/*********************************************************
+ * Universidad del Valle de Guatemala
+ * Algoritmos y Estructuras de Datos
+ * Prof: Douglas Barrios
+ * Cristian Castillo            14015
+ * Fernanda Gonzalez Davila     14482
+ *********************************************************/
+ public class Node {
 	protected String english;
 	protected String spanish;
 	protected Node leftNode;
